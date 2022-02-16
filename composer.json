@@ -1,0 +1,14 @@
+{
+    "autoload": {
+        "psr-4": {
+            "simphplio\\": "core/",
+            "simphplio\\app\\": "app/"
+        }
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.6"
+    },
+    "require": {
+        "ext-pdo": "*"
+    }
+}

@@ -1,0 +1,27 @@
+#RewriteBase / 
+RewriteEngine on
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1
+
+<FilesMatch "\.(css|js|gif|png|jpg|jpeg|ogg|mp4|webm|svg|svgz|eot|ttf|otf|woff|woff2|ico)$">
+Header set Cache-Control "private, max-age=964224000"
+</FilesMatch>
+
+Header unset ETag
+FileETag None
+
+#Custom 400 errors
+ErrorDocument 400 /www/erros/400.html
+
+#Custom 401 errors
+ErrorDocument 401 /www/erros/401.html
+
+#Custom 403 errors
+ErrorDocument 403 /www/erros/403.html
+
+#Custom 404 errors
+ErrorDocument 404 /www/erros/404.html
+
+#Custom 500 errors
+ErrorDocument 500 /www/erros/500.html
