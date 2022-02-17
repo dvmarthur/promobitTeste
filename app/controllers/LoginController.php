@@ -8,6 +8,7 @@ class Login extends Controller
 
     public function entrar()
     {
+       
         if(!empty($_SESSION['auth']['user'])){
 
             $this->view("index");
