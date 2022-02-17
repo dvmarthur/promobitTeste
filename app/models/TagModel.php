@@ -38,6 +38,21 @@ class TagModel extends Model
         return die(var_dump($e));
     }
     }
+    public function selectTag($id)
+    {
+       try{
+        $sql = "SELECT * FROM tag WHERE id = :id";
+
+        $queryExe = $this->database->prepare($sql);
+        $queryExe->bindParam(':id',$id);
+
+        $queryExe->execute();
+        
+         return $queryExe->fetch(PDO::FETCH_ASSOC);
+       }  catch (PDOException $e) {
+        return die(var_dump($e));
+    }
+    }
 
     public function sumPROD($id)
     {
@@ -54,6 +69,54 @@ class TagModel extends Model
        }  catch (PDOException $e) {
         return die(var_dump($e));
     }
+    }
+    public function deleteTAGrelacionadas($id)
+    {
+        try {
+            $sql = "DELETE FROM product_tag WHERE `tag_id` = :id";
+
+            $queryExe = $this->database->prepare($sql);
+
+            $queryExe->bindParam(':id', $id);
+
+            $queryExe->execute();
+        } catch (PDOException $e) {
+            return die(var_dump($e));
+        }
+    }
+    public function deleteTag($id)
+    {
+        try {
+            $sql = "DELETE FROM tag WHERE `id` = :id";
+
+            $queryExe = $this->database->prepare($sql);
+
+            $queryExe->bindParam(':id', $id);
+
+            $queryExe->execute();
+        } catch (PDOException $e) {
+            return die(var_dump($e));
+        }
+    }
+    public function updateTag($name,$id)
+    {
+        try {
+            $sql = "UPDATE tag
+        SET name = :name
+        WHERE id = :id ";
+
+            $queryExe = $this->database->prepare($sql);
+
+            $queryExe->bindParam(':name', $name);
+            $queryExe->bindParam(':id', $id);
+
+
+            $queryExe->execute();
+            // $idinserido = $this->database->lastInsertId();
+            // return $idinserido;
+        } catch (PDOException $e) {
+            return die(var_dump($e));
+        }
     }
 
 }

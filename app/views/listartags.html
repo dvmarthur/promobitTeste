@@ -168,13 +168,13 @@
                     <thead>
                       <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Produto</th>
+                        <th scope="col">TAG</th>
                         <th scope="col">Editar</th>
                         <th scope="col">Deletar</th>
                       </tr>
                     </thead>
                     <tbody>
-                     {#LISTAPRODUTOS}                 
+                     {#LISTATAGS}                 
                     </tbody>
                   </table>
                 
@@ -244,16 +244,7 @@
         alert("yes, there has been an issue");
 }
 </script>
-<script>
-  var tags = [];
-   function addTag(){
-     tags += jQuery('#selecttag').val();
-     $("#selecttag option[value='"+jQuery('#selecttag').val()+"']").remove();
-    jQuery('#tags_array').val(tags);
-   
-  }
-  
-</script>
+
 </body>
 
 </html>

@@ -103,7 +103,7 @@
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-              
+            
             <li class="nav-item menu-open">
               <a href="{#APP_URL}produto/criar" class="nav-link active">
                 <i class="nav-icon fas fa-plus-circle"></i>
@@ -121,22 +121,22 @@
               </a>
             </li>
             <li class="nav-item menu-open">
-                <a href="{#APP_URL}produto/listar" class="nav-link active">
-                  <i class="nav-icon fas fa-plus-circle"></i>
-                  <p>
-                    Listar produtos
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item menu-open">
-                <a href="{#APP_URL}tag/listar" class="nav-link active">
-                  <i class="nav-icon fas fa-plus-circle"></i>
-                  <p>
-                    Listar Tags
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item menu-open">
+              <a href="{#APP_URL}produto/listar" class="nav-link active">
+                <i class="nav-icon fas fa-plus-circle"></i>
+                <p>
+                  Listar produtos
+                </p>
+              </a>
+            </li>
+            <li class="nav-item menu-open">
+              <a href="{#APP_URL}tag/listar" class="nav-link active">
+                <i class="nav-icon fas fa-plus-circle"></i>
+                <p>
+                  Listar Tags
+                </p>
+              </a>
+            </li>
+            <li class="nav-item menu-open">
                 <a href="{#APP_URL}tag/relatorio" class="nav-link active">
                   <i class="nav-icon fas fa-plus-circle"></i>
                   <p>
@@ -144,7 +144,6 @@
                   </p>
                 </a>
               </li>
-              
           </ul>
         </nav>
         <!-- /.sidebar-menu -->
@@ -162,22 +161,23 @@
 
           <div class="row">
             <section class="col-lg-12 connectedSortable">
+              <form action="{#APP_URL}tag/editar/ideditar/{#ID}" method="post" onsubmit= "addArrayTag()" class="signupform" name="signupform">
+                <div class="card-body">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Nome da tag</label>
+                      <input type="text" value="{#NAME}" class="form-control" name="tag" id="exampleInputEmail1"
+                        placeholder="Defina o nome da tag" required>
+                    </div> 
+                    <hr>
+                        
+                    <hr>
+                    <button type="submit" class="btn btn-primary">Atualizar Tag</button>
+                  </div>
+                  {#RETURNMESSAGE}
+                  <!-- /.card-body -->
 
-             
-                <table class="table table-bordered table-dark mt-5">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Produto</th>
-                        <th scope="col">Editar</th>
-                        <th scope="col">Deletar</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                     {#LISTAPRODUTOS}                 
-                    </tbody>
-                  </table>
-                
+              </form>
           </div>
         </div>
       </section>
@@ -244,16 +244,8 @@
         alert("yes, there has been an issue");
 }
 </script>
-<script>
-  var tags = [];
-   function addTag(){
-     tags += jQuery('#selecttag').val();
-     $("#selecttag option[value='"+jQuery('#selecttag').val()+"']").remove();
-    jQuery('#tags_array').val(tags);
-   
-  }
   
-</script>
+
 </body>
 
 </html>

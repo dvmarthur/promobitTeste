@@ -1,5 +1,5 @@
 <?php
-const APP_URL = 'http://localhost/promobitcrud2/';
+const APP_URL = 'http://localhost/promobitTeste/';
 
 //Database
 const DB_DRIVER = "mysql";

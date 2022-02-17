@@ -12,24 +12,24 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{#APP_URL}core/resources/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="{#APP_URL}resources/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bootstrap 4 -->
   <link rel="stylesheet"
-    href="{#APP_URL}core/resources/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    href="{#APP_URL}resources/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
   <!-- iCheck -->
-  <link rel="stylesheet" href="{#APP_URL}core/resources/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="{#APP_URL}resources/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- JQVMap -->
-  <link rel="stylesheet" href="{#APP_URL}core/resources/plugins/jqvmap/jqvmap.min.css">
+  <link rel="stylesheet" href="{#APP_URL}resources/plugins/jqvmap/jqvmap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{#APP_URL}core/resources/css/adminlte.min.css">
+  <link rel="stylesheet" href="{#APP_URL}resources/css/adminlte.min.css">
   <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="{#APP_URL}core/resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="{#APP_URL}resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Daterange picker -->
-  <link rel="stylesheet" href="{#APP_URL}core/resources/plugins/daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="{#APP_URL}resources/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
-  <link rel="stylesheet" href="{#APP_URL}core/resources/plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="{#APP_URL}resources/plugins/summernote/summernote-bs4.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -37,7 +37,7 @@
 
     <!-- Preloader -->
     <div class="preloader flex-column justify-content-center align-items-center">
-      <img class="animation__shake" src="{#APP_URL}core/resources/img/AdminLTELogo.png" alt="AdminLTELogo" height="60"
+      <img class="animation__shake" src="{#APP_URL}resources/img/AdminLTELogo.png" alt="AdminLTELogo" height="60"
         width="60">
     </div>
 
@@ -58,7 +58,7 @@
 
       <!-- Right navbar links -->
       <ul class="navbar-nav ml-auto">
-        <a class="nav-link" data-widget="exit" href="{#APP_URL}core/login/deslogar" role="button">
+        <a class="nav-link" data-widget="exit" href="{#APP_URL}login/deslogar" role="button">
           <i class="fas fa-sign-out-alt"> Deslogar </i>
         </a>
       </ul>
@@ -69,7 +69,7 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
       <a href="index3.html" class="brand-link">
-        <img src="{#APP_URL}core/resources/img/AdminLTELogo.png" alt="AdminLTE Logo"
+        <img src="{#APP_URL}resources/img/AdminLTELogo.png" alt="AdminLTE Logo"
           class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light">AdminLTE 3</span>
       </a>
@@ -79,7 +79,7 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image">
-            <img src="{#APP_URL}core/resources/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+            <img src="{#APP_URL}resources/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
             <a href="#" class="d-block">Alexander Pierce</a>
@@ -105,7 +105,7 @@
                with font-awesome or any other icon font library -->
             
             <li class="nav-item menu-open">
-              <a href="{#APP_URL}core/produto/criar" class="nav-link active">
+              <a href="{#APP_URL}produto/criar" class="nav-link active">
                 <i class="nav-icon fas fa-plus-circle"></i>
                 <p>
                   Cadastrar novo produto
@@ -113,7 +113,7 @@
               </a>
             </li>
             <li class="nav-item menu-open">
-              <a href="{#APP_URL}core/tag/criar" class="nav-link active">
+              <a href="{#APP_URL}tag/criar" class="nav-link active">
                 <i class="nav-icon fas fa-plus-circle"></i>
                 <p>
                   Cadastrar nova tag
@@ -121,7 +121,7 @@
               </a>
             </li>
             <li class="nav-item menu-open">
-              <a href="{#APP_URL}core/produto/listar" class="nav-link active">
+              <a href="{#APP_URL}produto/listar" class="nav-link active">
                 <i class="nav-icon fas fa-plus-circle"></i>
                 <p>
                   Listar produtos
@@ -129,7 +129,15 @@
               </a>
             </li>
             <li class="nav-item menu-open">
-              <a href="{#APP_URL}core/tag/relatorio" class="nav-link active">
+              <a href="{#APP_URL}tag/listar" class="nav-link active">
+                <i class="nav-icon fas fa-plus-circle"></i>
+                <p>
+                  Listar Tags
+                </p>
+              </a>
+            </li>
+            <li class="nav-item menu-open">
+              <a href="{#APP_URL}tag/relatorio" class="nav-link active">
                 <i class="nav-icon fas fa-plus-circle"></i>
                 <p>
                   Relatorio
@@ -154,7 +162,7 @@
 
           <div class="row">
             <section class="col-lg-12 connectedSortable">
-              <form action="{#APP_URL}core/produto/cadastrar" method="post" onsubmit= "addArrayTag()" class="signupform" name="signupform">
+              <form action="{#APP_URL}produto/cadastrar" method="post" onsubmit= "addArrayTag()" class="signupform" name="signupform">
                 <div class="card-body">
                   <div class="col-lg-6">
                     <div class="form-group">
@@ -201,39 +209,39 @@
   <!-- ./wrapper -->
 
   <!-- jQuery -->
-  <script src="{#APP_URL}core/resources/plugins/jquery/jquery.min.js"></script>
+  <script src="{#APP_URL}resources/plugins/jquery/jquery.min.js"></script>
   <!-- jQuery UI 1.11.4 -->
-  <script src="{#APP_URL}core/resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+  <script src="{#APP_URL}resources/plugins/jquery-ui/jquery-ui.min.js"></script>
   <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
   <script>
     $.widget.bridge('uibutton', $.ui.button)
   </script>
   <!-- Bootstrap 4 -->
-  <script src="{#APP_URL}core/resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{#APP_URL}resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- ChartJS -->
-  <script src="{#APP_URL}core/resources/plugins/chart.js/Chart.min.js"></script>
+  <script src="{#APP_URL}resources/plugins/chart.js/Chart.min.js"></script>
   <!-- Sparkline -->
-  <script src="{#APP_URL}core/resources/plugins/sparklines/sparkline.js"></script>
+  <script src="{#APP_URL}resources/plugins/sparklines/sparkline.js"></script>
   <!-- JQVMap -->
-  <script src="{#APP_URL}core/resources/plugins/jqvmap/jquery.vmap.min.js"></script>
-  <script src="{#APP_URL}core/resources/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <script src="{#APP_URL}resources/plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="{#APP_URL}resources/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
   <!-- jQuery Knob Chart -->
-  <script src="{#APP_URL}core/resources/plugins/jquery-knob/jquery.knob.min.js"></script>
+  <script src="{#APP_URL}resources/plugins/jquery-knob/jquery.knob.min.js"></script>
   <!-- daterangepicker -->
-  <script src="{#APP_URL}core/resources/plugins/moment/moment.min.js"></script>
-  <script src="{#APP_URL}core/resources/plugins/daterangepicker/daterangepicker.js"></script>
+  <script src="{#APP_URL}resources/plugins/moment/moment.min.js"></script>
+  <script src="{#APP_URL}resources/plugins/daterangepicker/daterangepicker.js"></script>
   <!-- Tempusdominus Bootstrap 4 -->
-  <script src="{#APP_URL}core/resources/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <script src="{#APP_URL}resources/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
   <!-- Summernote -->
-  <script src="{#APP_URL}core/resources/plugins/summernote/summernote-bs4.min.js"></script>
+  <script src="{#APP_URL}resources/plugins/summernote/summernote-bs4.min.js"></script>
   <!-- overlayScrollbars -->
-  <script src="{#APP_URL}core/resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <script src="{#APP_URL}resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
   <!-- AdminLTE App -->
-  <script src="{#APP_URL}core/resources/js/adminlte.js"></script>
+  <script src="{#APP_URL}resources/js/adminlte.js"></script>
   <!-- AdminLTE for demo purposes -->
-  <script src="{#APP_URL}core/resources/js/demo.js"></script>
+  <script src="{#APP_URL}resources/js/demo.js"></script>
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-  <script src="{#APP_URL}core/resources/js/pages/dashboard.js"></script>
+  <script src="{#APP_URL}resources/js/pages/dashboard.js"></script>
 
   <script>
     $(document).ready(function () {
@@ -249,7 +257,7 @@
 <script>
   var tags = [];
    function addTag(){
-     tags += jQuery('#selecttag').val();
+     tags += jQuery('#selecttag').val() +'-';
      $("#selecttag option[value='"+jQuery('#selecttag').val()+"']").remove();
     jQuery('#tags_array').val(tags);
    

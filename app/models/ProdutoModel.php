@@ -55,6 +55,7 @@ class ProdutoModel extends Model
             $queryExe->bindParam(':tag', $tag);
 
             $queryExe->execute();
+            return;
         } catch (PDOException $e) {
             return die(var_dump($e));
         }
