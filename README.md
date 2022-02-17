@@ -23,6 +23,7 @@ importar o banco "promobit.sql"
 ir no env.php e setar a pasta onde o projeto está hospedado e o banco
 
 
-
+LOGIN : 123@123
+SENHA : 123
 
 
